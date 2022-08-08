@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Pared : MonoBehaviour
 {
-
-    float portUse = 2f;
-    float portStart = 0;
+    // Propiedades
     // Start is called before the first frame update
     void Start()
     {
@@ -18,17 +16,5 @@ public class Pared : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            portStart += Time.deltaTime;
-            if (portStart > portUse)
-            {
-                portStart = 0;
-                transform.position = new Vector3(0, 6, 0);
-                transform.Rotate= new Vector3(90, 90, 90);
-            }
-        }
-    }
+    
 }
